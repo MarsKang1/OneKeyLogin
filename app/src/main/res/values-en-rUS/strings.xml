@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UMCSDK</string>
+    <string name="action_settings">Settings</string>
+    <string name="umc_lable">SDK-API</string>
+    <string name="none_login1">ImplicatLogin</string>
+    <string name="layout_login">DisplayLogin</string>
+    <string name="outh_login">SmsCodeLogin</string>
+    <string name="umc_get_user_info">GetUserinfo</string>
+    <string name="user_authorization">GetAuthorizelist</string>
+    <string name="logout_authorization">Logout</string>
+    <string name="order_page">OrderPage</string>
+    <string name="select_user_state">QueryUserinfo</string>
+    <string name="select_mobilenumberBill">MobilenumberBill</string>
+    <string name="verify_mobileNumber">CheckLocalMobile</string>
+    <string name="isTest">IsTest</string>
+    <string name="umcsdk_test">测试线</string>
+    <string name="umcsdk_grey">灰度</string>
+    <string name="umcsdk_product">现网</string>
+
+</resources>

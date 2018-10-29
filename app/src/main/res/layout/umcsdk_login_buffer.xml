@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.cmic.sso.sdk.widget.LoginBufferImageView
+            android:id="@+id/umcsdk_load_animation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/umcsdk_loading" />
+
+        <TextView
+            android:id="@+id/umcsdk_verification_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/umcsdk_load_animation"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/umcsdk_verify_identity"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <!-- 异常提示 -->
+    <include
+        android:id="@+id/umcsdk_exception_layout"
+        layout="@layout/umcsdk_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/umcsdk_title_layout"
+        android:visibility="gone" />
+
+    <!-- title -->
+    <include
+        android:id="@+id/umcsdk_title_layout"
+        layout="@layout/umcsdk_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/umcsdk_title_height"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+</RelativeLayout>

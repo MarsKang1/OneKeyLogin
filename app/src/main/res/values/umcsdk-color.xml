@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- umcsdk -->
+<resources>
+
+    <color name="color_actionbar_bg">#ffffff</color>
+    <color name="color_blue_text">#0086d0</color>
+    <color name="color_gray_clause">#666666</color>
+    <color name="color_title_text">#101010</color>
+    <color name="color_login_text">#ffffff</color>
+    <color name="color_version_text">#999999</color>
+    <color name="color_bg">#f7f7f7</color>
+    <color name="color_smsbg">#ffffff</color>
+    <color name="color_free_text">#b8d4ed</color>
+    <color name="color_smscode_title">#666666</color>
+    <color name="color_getsmscode">#c5c4c4</color>
+
+</resources>

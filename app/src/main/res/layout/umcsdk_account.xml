@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg" >
+
+    <include
+        android:id="@+id/umcsdk_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/umcsdk_title_height"
+        android:layout_alignParentTop="true"
+        layout="@layout/umcsdk_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/umcsdk_title_layout"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/umcsdk_logo_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/color_smsbg">
+                <!-- logo -->
+
+                <ImageView
+                    android:id="@+id/umcsdk_log_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/umcsdk_mobilelogo_margin"
+                    android:layout_marginBottom="@dimen/umcsdk_smscode_margin"
+                    android:background="@drawable/umcsdk_mobile_logo" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/umcsdk_divider1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/umcsdk_logo_bg"
+                android:background="#c6c6c6" />
+
+            <com.cmic.sso.sdk.widget.CapabilityListView
+                android:id="@+id/umcsdk_account_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/umcsdk_divider1"
+                android:background="@color/color_smsbg"
+                android:divider="@null"
+                android:listSelector="#00000000"
+                android:scrollbars="none" />
+
+            <!-- 登录按钮部分 -->
+
+            <include
+                android:id="@+id/umcsdk_login_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/umcsdk_account_listview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/umcsdk_loginbtn_left"
+                android:layout_marginRight="@dimen/umcsdk_loginbtn_left"
+                android:layout_marginTop="@dimen/umcsdk_loginbtn_margin"
+                layout="@layout/umcsdk_login_button" />
+
+
+            <include
+                android:id="@+id/umcsdk_capaids_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/umcsdk_login_btn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/umcsdk_loginbtn_left"
+                android:layout_marginRight="@dimen/umcsdk_loginbtn_left"
+                android:layout_marginTop="@dimen/umcsdk_server_clause_margin"
+                layout="@layout/umcsdk_author" />
+
+            <!-- 服务协议 -->
+
+            <include
+                android:id="@+id/umcsdk_server_layout"
+                layout="@layout/umcsdk_server_clause"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/umcsdk_server_clause_margin"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+        
+        
+    </ScrollView>
+    <!-- 顶部提示标识 写在后面空间不够时在最上面覆盖下面的 -->
+    <include
+        android:id="@+id/umcsdk_exception_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/umcsdk_title_layout"
+        layout="@layout/umcsdk_error"
+        android:visibility="gone" />
+</RelativeLayout>

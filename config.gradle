@@ -1,0 +1,5 @@
+ext {
+    android = [
+            versionName : "quick_login_android_5.3.3"
+    ]
+}

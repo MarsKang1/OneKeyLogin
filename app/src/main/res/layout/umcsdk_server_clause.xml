@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="3dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+        <CheckBox
+            android:id="@+id/umcsdk_capability_checkbox"
+            android:layout_width="@dimen/umcsdk_server_checkbox_size"
+            android:layout_height="@dimen/umcsdk_server_checkbox_size"
+            android:background="@drawable/umcsdk_checkbox_bg"
+            android:button="@null"
+            android:checked="true" />
+
+        <TextView
+            android:id="@+id/umcsdk_bottom_identify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/umcsdk_padding_container"
+            android:text="@string/umcsdk_sure"
+            android:textColor="#999999"
+            android:textSize="@dimen/umcsdk_font_twenteen" />
+
+        <TextView
+            android:id="@+id/umcsdk_author_server_clause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:text="@string/umcsdk_clause"
+            android:textColor="#0086d0"
+            android:textSize="@dimen/umcsdk_font_twenteen" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/umcsdk_version_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/umcsdk_version_name"
+        android:textColor="@color/color_version_text"
+        android:textSize="@dimen/umcsdk_font_twenteen" />
+
+</LinearLayout>

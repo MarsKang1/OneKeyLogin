@@ -1,0 +1,338 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="#ffffff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/logo"
+        android:minHeight="36dp"
+        android:minWidth="244dp" />
+
+    <RadioGroup
+        android:id="@+id/umcsdk_is_authorize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/umcsdk_normal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_btn_left_shap"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="普通权限"
+            android:textColor="@drawable/selector_text_color"
+            android:textSize="14sp" />
+
+
+        <RadioButton
+            android:id="@+id/umcsdk_authorize"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_btn_right_shap"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="高级权限"
+            android:textColor="@drawable/selector_text_color"
+            android:textSize="14sp"
+            android:visibility="gone"
+            android:checked="false"/>
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/umcsdk_istest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <RadioButton
+            android:id="@+id/umcsdk_test"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_btn_left_shap"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/umcsdk_test"
+            android:textColor="@drawable/selector_text_color" />
+
+        <RadioButton
+            android:id="@+id/umcsdk_grey"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_btn_mid_shap"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/umcsdk_grey"
+            android:textColor="@drawable/selector_text_color" />
+
+        <RadioButton
+            android:id="@+id/umcsdk_product"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_btn_right_shap"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/umcsdk_product"
+            android:textColor="@drawable/selector_text_color" />
+    </RadioGroup>
+
+    <View
+        android:id="@+id/umcsdk_title_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#a9a9a9" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f7f7f9"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="本机号码校验"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/wap_login1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/button_margin"
+                    android:layout_marginRight="@dimen/button_margin"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/selector_btn"
+                    android:text="@string/none_login1" />
+
+                <EditText
+                    android:id="@+id/phone_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:hint="输入手机号码"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/button_margin"
+                    android:layout_marginRight="@dimen/button_margin"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/selector_btn" />
+
+                <Button
+                    android:id="@+id/validate_phone_bt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/button_margin"
+                    android:layout_marginRight="@dimen/button_margin"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/selector_btn"
+                    android:text="本机号码校验" />
+
+                <Button
+                    android:id="@+id/search_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/button_margin"
+                    android:layout_marginRight="@dimen/button_margin"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/selector_btn"
+                    android:enabled="false"
+                    android:text="查询登录账户"
+                    android:visibility="gone" />
+
+
+
+                <Button
+                    android:id="@+id/mobilenumberStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/button_margin"
+                    android:layout_marginRight="@dimen/button_margin"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/selector_btn"
+                    android:enabled="false"
+                    android:text="@string/select_user_state"
+                    android:visibility="gone" />
+
+                <!-- 查询sim卡信息 -->
+                <Button
+                    android:id="@+id/SimStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/button_margin"
+                    android:layout_marginRight="@dimen/button_margin"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/selector_btn"
+                    android:enabled="false"
+                    android:text="@string/select_sim_state"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/verifyMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/button_margin"
+                    android:layout_marginRight="@dimen/button_margin"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/selector_btn"
+                    android:enabled="false"
+                    android:text="@string/verify_mobileNumber"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/logout_Authorization"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/button_margin"
+                    android:layout_marginRight="@dimen/button_margin"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/selector_btn"
+                    android:text="@string/logout_authorization"
+                    android:textColor="#FF0000"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="一键登录"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+
+
+                <Button
+                    android:id="@+id/pre_getphone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/button_margin"
+                    android:layout_marginRight="@dimen/button_margin"
+                    android:layout_marginTop="10dp"
+                    android:visibility="visible"
+                    android:background="@drawable/selector_btn"
+                    android:text="@string/pre_getphone" />
+
+                <Button
+                    android:id="@+id/sms_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/button_margin"
+                    android:layout_marginRight="@dimen/button_margin"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/selector_btn"
+                    android:text="显式获取token" />
+
+                <Button
+                    android:id="@+id/get_user_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/button_margin"
+                    android:layout_marginRight="@dimen/button_margin"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/selector_btn"
+                    android:enabled="true"
+                    android:text="@string/umc_get_user_info"
+                    android:visibility="visible" />
+
+
+                <Button
+                    android:id="@+id/outh_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/button_margin"
+                    android:layout_marginRight="@dimen/button_margin"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    android:background="@drawable/selector_btn"
+                    android:text="@string/outh_login" />
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="打开Wifi 下取号功能"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_result"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/button_margin"
+                android:layout_marginRight="@dimen/button_margin"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="20dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/text_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_version_text"
+                android:layout_marginLeft="@dimen/button_margin"
+                android:layout_marginRight="@dimen/button_margin"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:layout_alignParentBottom="true"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

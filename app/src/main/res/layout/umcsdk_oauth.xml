@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_smsbg">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/umcsdk_title_layout"
+            >
+
+            <!-- 异常提示 -->
+            <include
+                android:id="@+id/umcsdk_exception_layout"
+                layout="@layout/umcsdk_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/umcsdk_identify_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true">
+                <ImageView
+                    android:id="@+id/umcsdk_identify_img"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="34dp"
+                    android:layout_marginTop="36dp"
+                    android:background="@drawable/umcsdk_identify_icon"/>
+                <TextView
+                    android:id="@+id/umcsdk_identify_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="手机认证服务由中国移动提供"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginTop="37dp"
+                    android:textSize="12sp"
+                    android:textColor="#999999" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/umcsdk_securityPhone"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/umcsdk_identify_layout"
+                android:background="@drawable/shap_layout_bg"
+                android:layout_marginLeft="34dp"
+                android:layout_marginRight="34dp"
+                android:layout_marginTop="11dp">
+
+                <TextView
+                    android:id="@+id/umcsdk_phone_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="14sp"
+                    android:text="手机号"
+                    android:layout_marginLeft="13dp"/>
+                <View
+                    android:id="@+id/umcsdk_divide_line"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#c6c6c6"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:layout_toRightOf="@id/umcsdk_phone_tv"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="13dp"/>
+
+                <EditText
+                    android:id="@+id/umcsdk_oauth_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:drawablePadding="10dp"
+                    android:layout_toRightOf="@id/umcsdk_divide_line"
+                    android:gravity="center_vertical"
+                    android:maxLength="11"
+                    android:paddingLeft="13dp"
+                    android:textColorHint="#999999"
+                    android:inputType="phone"
+                    android:paddingRight="@dimen/umcsdk_loginbtn_left"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/umcsdk_clear_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="13dp"
+                    android:src="@drawable/umcsdk_delete_phone_icon"
+                    android:textColor="#999999"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/layout_oauth_passwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/umcsdk_securityPhone">
+                <!-- 短信验证码 -->
+                <RelativeLayout
+                    android:id="@+id/layout_oauth_passwd01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="34dp"
+                    android:background="@drawable/shap_layout_bg">
+
+                    <TextView
+                        android:id="@+id/umcsdk_yan_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="14sp"
+                        android:text="验证码"
+                        android:layout_marginLeft="13dp"/>
+                    <View
+                        android:id="@+id/umcsdk_yan_divide_line"
+                        android:layout_width="1dp"
+                        android:layout_height="30dp"
+                        android:background="#c6c6c6"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="7dp"
+                        android:layout_toRightOf="@id/umcsdk_yan_tv"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13dp"/>
+
+                    <EditText
+                        android:id="@+id/umcsdk_oauth_passwd"
+                        android:layout_width="120dp"
+                        android:layout_height="44dp"
+                        android:paddingLeft="13dp"
+                        android:paddingRight="20dp"
+                        android:background="@android:color/transparent"
+                        android:textColorHint="#999999"
+                        android:maxLength="6"
+                        android:inputType="number"
+                        android:textSize="15sp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignLeft="@+id/umcsdk_yan_divide_line"
+                        android:layout_alignStart="@+id/umcsdk_yan_divide_line" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/umcsdk_smscode_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/umcsdk_get_sms_code"
+                    android:layout_toRightOf="@id/layout_oauth_passwd01"
+                    android:layout_alignBottom="@id/layout_oauth_passwd01"
+                    android:textColor="#999999"
+                    android:padding="5dp"
+                    android:layout_marginLeft="16dp"
+                    android:enabled="false"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <!-- 登录按钮 -->
+            <include
+                android:id="@+id/umcsdk_login_btn"
+                layout="@layout/umcsdk_login_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/umcsdk_btn_height"
+                android:layout_below="@id/layout_oauth_passwd"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="58dp"
+                android:layout_marginRight="58dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="120dp"
+                android:clickable="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:minWidth="@dimen/umcsdk_min_width" />
+
+            <!-- 服务协议 -->
+            <include
+                android:id="@+id/umcsdk_server_layout"
+                layout="@layout/umcsdk_server_clause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+    <!-- title -->
+    <include
+        android:id="@+id/umcsdk_title_layout"
+        layout="@layout/umcsdk_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/umcsdk_title_height"
+        android:layout_alignParentTop="true" />
+
+
+
+</RelativeLayout>

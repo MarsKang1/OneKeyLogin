@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/umcsdk_title_layout"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/umcsdk_single_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_smsbg"
+                android:orientation="vertical">
+
+                <!-- logo -->
+                <ImageView
+                    android:id="@+id/umcsdk_log_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="31dp"
+                    android:background="@drawable/umcsdk_mobile_logo" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F2F2F2"
+                    android:layout_marginTop="31dp"
+                    android:layout_marginLeft="34dp"
+                    android:layout_marginRight="34dp"></View>
+                
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/umcsdk_identify_img"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginLeft="34dp"
+                        android:background="@drawable/umcsdk_identify_icon"/>
+                    <TextView
+                        android:id="@+id/umcsdk_identify_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="手机认证服务由中国移动提供"
+                        android:layout_marginLeft="56dp"
+                        android:textSize="12sp"
+                        android:textColor="#999999"
+                        android:layout_marginTop="32dp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/umcsdk_securityPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginLeft="33dp"
+                    android:layout_marginRight="33dp"
+                    android:background="@drawable/shap_layout_bg">
+
+                    <TextView
+                        android:id="@+id/umcsdk_phone_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="14sp"
+                        android:text="本机号码"
+                        android:layout_marginLeft="13dp"/>
+                    <View
+                        android:id="@+id/umcsdk_divide_line"
+                        android:layout_width="1dp"
+                        android:layout_height="30dp"
+                        android:background="#c6c6c6"
+                        android:layout_toRightOf="@id/umcsdk_phone_tv"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"/>
+
+                    <TextView
+                        android:id="@+id/mobile_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_centerVertical="true"
+                        android:drawablePadding="10dp"
+                        android:layout_toRightOf="@id/umcsdk_divide_line"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="@dimen/umcsdk_loginbtn_left"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/umcsdk_title_switch_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="切换账号"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="12dp"
+                        android:textColor="#0080cc"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/umcsdk_single_account"
+                android:background="@color/color_smsbg"
+                android:orientation="vertical">
+
+                <!-- 登录按钮部分 -->
+                <include
+                    android:id="@+id/umcsdk_login_btn"
+                    layout="@layout/umcsdk_login_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="58dp"
+                    android:layout_marginRight="58dp"
+                    android:layout_marginTop="50dp" />
+
+
+                <!-- 服务协议 -->
+                <include
+                    android:id="@+id/umcsdk_server_layout"
+                    layout="@layout/umcsdk_server_clause"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/umcsdk_server_clause_margin" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <!-- 异常提示 -->
+    <include
+        android:id="@+id/umcsdk_exception_layout"
+        layout="@layout/umcsdk_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/umcsdk_title_layout"
+        android:visibility="gone" />
+
+    <!-- title -->
+    <include
+        android:id="@+id/umcsdk_title_layout"
+        layout="@layout/umcsdk_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/umcsdk_title_height"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+</RelativeLayout>

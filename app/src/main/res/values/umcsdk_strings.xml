@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 二维码 -->
+    <string name="umcsdk_account_name">中国移动互联网通行证</string>
+    <string name="umcsdk_pref_about">关于</string>
+    <string name="umcsdk_pref_item1">账户安全保护</string>
+    <string name="umcsdk_pref_value1">您的中国移动互联网账户已受安全账户机制保护。</string>
+    <string name="umcsdk_pref_item2">隐私权</string>
+    <string name="umcsdk_pref_value2">中国移动互联网账户不会同步您的隐私信息</string>
+    <string name="umcsdk_login_other_number">使用其它号码登录</string>
+    <string name="umcsdk_login_owner_number">本机号码一键登录</string>
+    <string name="umcsdk_login">登录</string>
+    <string name="umcsdk_login_ing">登录中</string>
+    <string name="umcsdk_clause">《中国移动号码服务条款》</string>
+    <string name="umcsdk_sure">登录即同意</string>
+    <string name="umcsdk_hint_username">请输入手机号码</string>
+    <string name="umcsdk_hint_passwd">请输入验证码</string>
+    <string name="umcsdk_get_sms_code">获取验证码</string>
+    <string name="umcsdk_switch_account">切换账号</string>
+    <string name="umcsdk_version_name">和通行证提供技术能力</string>
+    <string name="umcsdk_oauth_version_name">v1.4.1</string>
+    <string name="umcsdk_sms_login">短信验证码登录</string>
+    <string name="umcsdk_account_login">使用历史帐号快速登录</string>
+    <string name="umcsdk_capaids_text">该应用请求获取以下权限</string>
+    <string name="umcsdk_capability">您的手机号码、号码状态等信息</string>
+    <string name="umcsdk_get">获得</string>
+    <string name="umcsdk_local_mobile">(本机号码)</string>
+    <!-- v1.4.0 -->
+    <string name="umcsdk_auto_login_ing">本机号码登录中</string>
+    <string name="umcsdk_auto_login">本机号码登录</string>
+    <string name="umcsdk_login_success">登录成功</string>
+    <string name="umcsdk_login_failure">获取本机号码失败，请使用短信验证码登录</string>
+    <string name="umcsdk_login_limit">您登录过于频繁，请使用短信验证码登录</string>
+    <string name="umcsdk_login_account_info_expire">帐号信息已过期，请使用短信验证码登录</string>
+    <string name="umcsdk_network_error">网络连接异常</string>
+    <string name="umcsdk_getphonenumber_timeout">获取本机号码超时！</string>
+    <string name="umcsdk_smscode_wait_time">秒后重新获取</string>
+    <string name="umcsdk_getsmscode_failure">获取短信验证码失败</string>
+    <string name="umcsdk_phonenumber_failure">请输入正确的手机号码！</string>
+    <string name="umcsdk_smslogin_failure">短信验证码登录失败</string>
+    <string name="umcsdk_smscode_error">请输入正确的短信验证码</string>
+    <string name="umcsdk_openapi_error">开放平台错误</string>
+    <!-- 显示登陆按钮提示 -->
+    <string name="umcsdk_cmcc_wap">如果发送短信验证，此短信免费</string>
+    <string name="umcsdk_cmcc_wifi">自动发送短信验证，此短信免费</string>
+    <string name="umcsdk_other_wap">支持联通、电信用户，可能发送免费验证短信</string>
+    <string name="umcsdk_other_wifi">支持联通、电信用户，免费发送验证短信</string>
+    <string name="umcsdk_verify_identity">正在校验您的身份,请稍候...</string>
+    <string name="umcsdk_permission_tips">提示</string>
+    <string name="umcsdk_permission">拒绝授权将无法继续当前操作,是否重新提交授权？</string>
+    <string name="umcsdk_permission_ok">是</string>
+    <string name="umcsdk_permission_no">否</string>
+
+</resources>
